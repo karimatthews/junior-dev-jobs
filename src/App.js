@@ -1,5 +1,3 @@
-
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -7,156 +5,25 @@ import {
   Link
 } from 'react-router-dom'
 
-import running from './images/running.svg' // relative path to image
+//import components
+import Topbar from './components/Topbar'
 
-const Home = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h1 className = 'heading'>Welcome to Junior Dev Jobs</h1>
-      </Grid>
-    </Jumbotron>
-
-    <div className = 'container container--vertical'>
-
-      <Button
-        bsStyle="success"
-        bsSize="large"
-        href="/searchjobs"
-        className = "btn--main"
-        // target="_blank"
-        >
-        I want to get paid to code
-      </Button>
-
-      <Button
-        bsStyle="success"
-        bsSize="large"
-        href="/submitjob"
-        className = "btn--main"
-        // target="_blank"
-        >
-        I want to hire a junior dev
-        </Button>
-
-      <img src = {running} alt = {'logo'} className = 'image' />
-    </div>
-  </div>
-)
-
-const About = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h2>About</h2>
-      </Grid>
-    </Jumbotron>
-  </div>
-)
-
-const SearchJobs = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h2>Search Jobs</h2>
-      </Grid>
-    </Jumbotron>
-  </div>
-)
-
-const SubmitJob = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h2>Submit Job</h2>
-      </Grid>
-    </Jumbotron>
-  </div>
-)
-
-const UsefulLinks = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h2>Useful Links</h2>
-      </Grid>
-    </Jumbotron>
-  </div>
-)
-
-
-
+import Home from './components/Home'
+import About from './components/About'
+import SearchJobs from './components/SearchJobs'
+import SubmitJob from './components/SubmitJob'
+import UsefulLinks from './components/UsefulLinks'
 
 
 const App = () => (
   <Router>
     <div>
-      <Navbar inverse fixedTop>
-        <Grid>
-          <Navbar.Header>
-
-            <Navbar.Brand>
-              <Link to="/">
-                Home
-              </Link>
-
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-          <Navbar.Header>
-
-            <Navbar.Brand>
-              <Link to="/about">
-                About
-              </Link>
-
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-          <Navbar.Header>
-
-            <Navbar.Brand>
-              <Link to="/searchjobs">
-                Search Jobs
-              </Link>
-
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-          <Navbar.Header>
-
-            <Navbar.Brand>
-              <Link to="/submitjob">
-                Submit Job
-              </Link>
-
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-          <Navbar.Header>
-
-            <Navbar.Brand>
-              <Link to="/usefullinks">
-                Useful Links
-              </Link>
-
-            </Navbar.Brand>
-            <Navbar.Toggle />
-
-          </Navbar.Header>
-        </Grid>
-       </Navbar>
-
+      <Topbar />
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/searchjobs" component={SearchJobs}/>
       <Route path="/submitjob" component={SubmitJob}/>
       <Route path="/usefullinks" component={UsefulLinks}/>
-
     </div>
   </Router>
 )
