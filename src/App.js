@@ -1,18 +1,78 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Navbar inverse fixedTop>
+          <Grid>
+            <Navbar.Header>
+
+              <Navbar.Brand>
+                <a href="/">Home</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+
+              <Navbar.Brand>
+                <a href="/about">About</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+
+              <Navbar.Brand>
+                <a href="/about">Search Jobs</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+
+              <Navbar.Brand>
+                <a href="/about">Useful Links</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+
+              <Navbar.Brand>
+                <a href="/about">Submit Job</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+
+            </Navbar.Header>
+          </Grid>
+        </Navbar>
+
+        <Jumbotron>
+          <Grid>
+            <h1>Welcome to Junior Dev Jobs</h1>
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                View React Bootstrap Docs
+              </Button>
+            </p>
+
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                I want to get paid to code
+              </Button>
+            </p>
+
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                I want to hire a junior dev
+              </Button>
+            </p>
+          </Grid>
+        </Jumbotron>
       </div>
     );
   }
