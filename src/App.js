@@ -13,39 +13,34 @@ const Home = () => (
   <div>
     <Jumbotron>
       <Grid>
-
-
-
-        <h1>Welcome to Junior Dev Jobs</h1>
-
-
-        <p>
-          <Button
-            bsStyle="success"
-            bsSize="large"
-            href="/searchjobs"
-            // target="_blank"
-            >
-            I want to get paid to code
-          </Button>
-        </p>
-
-        <p>
-          <Button
-            bsStyle="success"
-            bsSize="large"
-            href="/submitjob"
-            // target="_blank"
-            >
-            I want to hire a junior dev
-          </Button>
-        </p>
-
-        <img src = {running} alt = {'logo'} className="img-responsive"/>
-
-        
+        <h1 className = 'heading'>Welcome to Junior Dev Jobs</h1>
       </Grid>
     </Jumbotron>
+
+    <div className = 'container container--vertical'>
+
+      <Button
+        bsStyle="success"
+        bsSize="large"
+        href="/searchjobs"
+        className = "btn--main"
+        // target="_blank"
+        >
+        I want to get paid to code
+      </Button>
+
+      <Button
+        bsStyle="success"
+        bsSize="large"
+        href="/submitjob"
+        className = "btn--main"
+        // target="_blank"
+        >
+        I want to hire a junior dev
+        </Button>
+
+      <img src = {running} alt = {'logo'} className = 'image' />
+    </div>
   </div>
 )
 
