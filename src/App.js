@@ -5,6 +5,9 @@ import {
   Link
 } from 'react-router-dom'
 
+import './App.css';
+import './SearchJobs.css';
+
 //import components
 import Topbar from './components/Topbar'
 
