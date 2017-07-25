@@ -37,6 +37,7 @@ class SearchJobs extends Component{
               <h3>{ job.title }</h3>
               <strong>{ job.company }</strong>
               <p>{ job.suburb}</p>
+              <p>{ job.work_type}</p>
               <p>${ job.formatted_salary}</p>
               <p>{ job.description}</p>
             </div>
