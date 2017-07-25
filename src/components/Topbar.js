@@ -1,8 +1,6 @@
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Grid, Navbar } from 'react-bootstrap';
 import React from 'react'
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom'
 

@@ -1,4 +1,4 @@
-import { Grid, Jumbotron, Button } from 'react-bootstrap';
+import { Grid, Jumbotron} from 'react-bootstrap';
 import React from 'react'
 
 const About = () => (

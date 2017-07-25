@@ -40,3 +40,57 @@ body {
 .navbar-brand {
   margin-right: 40px;
 }
+
+.form-control {
+  width: 200px;
+}
+
+
+
+.input-group-addon
+{
+    background-color:#fff;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.input-group .input-group-addon + .form-control
+{
+    border-left: none;
+    border-right: none;
+}
+
+.input-group-addon:first-child {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+
+.left-inner-addon {
+    position: relative;
+    font-size: 1.2em;
+    color: #555;
+}
+.left-inner-addon input {
+    padding-left: 30px;
+}
+.left-inner-addon span {
+    position: absolute;
+    padding: 7px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+    color: #555;
+}
+.right-inner-addon input {
+    padding-right: 30px;
+}
+.right-inner-addon span {
+    position: absolute;
+    right: 0px;
+    padding: 7px 12px;
+    pointer-events: none;
+}

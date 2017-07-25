@@ -1,4 +1,4 @@
-import { Grid, Jumbotron, Button } from 'react-bootstrap';
+import { Grid, Jumbotron} from 'react-bootstrap';
 import React, {Component} from 'react'
 
 class SearchJobs extends Component{
@@ -32,7 +32,7 @@ class SearchJobs extends Component{
     {/* Display Jobs */}
     <div className = 'container container--vertical'>
       {
-          this.state.jobs.map((job, i) => (
+          this.state.jobs.reverse().map((job, i) => (
             <div key={i} className = 'job'>
               <h3>{ job.title }</h3>
               <strong>{ job.company }</strong>
