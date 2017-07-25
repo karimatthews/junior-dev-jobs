@@ -5,3 +5,7 @@
 .navbar-brand:active {
   color: #fff;
 }
+
+.navbar-brand--logo {
+  margin-left: 200px;
+}

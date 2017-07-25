@@ -33,12 +33,15 @@ class SearchJobs extends Component{
     <div className = 'container container--vertical'>
       {
           this.state.jobs.reverse().map((job) => (
-            <div key={job.id} className = 'job'>
-              <h3>{ job.title }</h3>
-              <strong>{ job.company }</strong>
-              <p>{ job.suburb}</p>
-              <p>{ job.work_type}</p>
-              <p>${ job.formatted_salary}</p>
+            <div key={job.id} className = 'job container container--vertical'>
+              <div className = 'toprow'>
+                <p className = 'title'>{ job.title }</p>
+                <p className = "topright"> { job.work_type}</p>
+              </div>
+              <p> <strong>{ job.company }</strong> - { job.suburb}</p>
+              {
+                job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p>
+              }
               <p>{ job.description}</p>
             </div>
           ))

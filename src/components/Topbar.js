@@ -13,7 +13,7 @@ const Topbar = () => (
 
         <Navbar.Brand>
           <Link to="/">
-            <img src = {logo} alt = {'image failed to load'} className = 'image--small' />
+            <img src = {logo} alt = {'failed to load'} className = 'image--small' />
           </Link>
 
         </Navbar.Brand>

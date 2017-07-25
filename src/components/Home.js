@@ -31,7 +31,7 @@ const Home = () => (
         I want to hire a junior dev
         </Button>
 
-      <img src = {running} alt = {'image failed to load'} className = 'image' />
+      <img src = {running} alt = {'failed to load'} className = 'image' />
     </div>
   </div>
 )

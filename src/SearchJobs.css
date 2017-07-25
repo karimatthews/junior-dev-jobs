@@ -6,4 +6,20 @@
   margin-left: 100px;
   border: 1px solid black;
   margin-bottom: 40px;
+  margin-top: 10px;
+
+}
+
+
+.topright {
+  margin-left: auto;
+}
+
+.title {
+  text-align: left;
+  font-size: 2em;
+}
+
+.toprow {
+  display: flex;
 }

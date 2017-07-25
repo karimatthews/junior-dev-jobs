@@ -48,16 +48,16 @@ class SubmitJob extends React.Component {
       <form className = "form" onSubmit = {this.handleSubmit}>
 
         <div className="form-group">
-          <label>Job Title:
+          <label>Job Title: *
             <input type="text" value = {this.state.title} onChange = {(event) => {this.setState({title: event.target.value})}}
-              className="form-control" name="title" />
+              className="form-control" name="title" required = "true"/>
           </label>
         </div>
 
         <div className="form-group">
-          <label>Company:
+          <label>Company: *
           <input type="text" value = {this.state.company} onChange = {(event) => {this.setState({company: event.target.value})}}
-            className="form-control" name="company" />
+            className="form-control" name="company" required = "true" />
           </label>
         </div>
 
@@ -75,10 +75,10 @@ class SubmitJob extends React.Component {
         </div>
 
         <div className="form-group">
-          <label>Work Type:
+          <label>Work Type: *
           <select value = {this.state.work_type} onChange = {(event) => {this.setState({work_type: event.target.value})}}
-            className="form-control" name="work_type" min = "0" max = '200000'>
-            <option> -- select an option -- </option>
+            className="form-control" name="work_type" min = "0" max = '200000'  required = "true">
+            <option value ="" disabled selected> -- select an option -- </option>
             <option> Full Time </option>
             <option> Part Time </option>
             <option> Internship </option>
@@ -89,24 +89,24 @@ class SubmitJob extends React.Component {
         </div>
 
         <div className="form-group">
-          <label>Suburb:
+          <label>Suburb: *
           <input type="text" value = {this.state.suburb} onChange = {(event) => {this.setState({suburb: event.target.value})}}
-            className="form-control" name="suburb" />
+            className="form-control" name="suburb" required = "true"/>
           </label>
         </div>
 
         <div className="form-group">
-          <label>Description:
+          <label>Description: *
           <textarea value = {this.state.description} onChange = {(event) => {this.setState({description: event.target.value})}}
-            className="form-control" name="description" >
+            className="form-control" name="description"  required = "true">
           </textarea>
           </label>
         </div>
 
         <div className="form-group">
-          <label>Source Link:
+          <label>Source Link: *
           <input type="text" value = {this.state.source_link} onChange = {(event) => {this.setState({source_link: event.target.value})}}
-            className="form-control" name="source_link" />
+            className="form-control" name="source_link" required = "true"/>
           </label>
         </div>
 
