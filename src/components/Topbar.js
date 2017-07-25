@@ -4,7 +4,7 @@ import {
   Link
 } from 'react-router-dom'
 
-
+import logo from '../images/logo.svg'
 
 const Topbar = () => (
   <Navbar inverse fixedTop>
@@ -13,7 +13,7 @@ const Topbar = () => (
 
         <Navbar.Brand>
           <Link to="/">
-            Home
+            <img src = {logo} alt = {'image failed to load'} className = 'image--small' />
           </Link>
 
         </Navbar.Brand>
@@ -35,7 +35,7 @@ const Topbar = () => (
 
         <Navbar.Brand>
           <Link to="/searchjobs">
-            Search Jobs
+            Job Search
           </Link>
 
         </Navbar.Brand>

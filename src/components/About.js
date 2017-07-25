@@ -8,6 +8,11 @@ const About = () => (
         <h2>About</h2>
       </Grid>
     </Jumbotron>
+
+    <div className = "container container__feature">
+      Whether you're looking to make a start in the Tech industry, or wanting to tap into
+      the talent pool of junior developers, this app exists to make your life easier.
+    </div>
   </div>
 )
 

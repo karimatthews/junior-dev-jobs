@@ -23,7 +23,7 @@ class SearchJobs extends Component{
   <div>
     <Jumbotron>
       <Grid>
-        <h2>Search Jobs</h2>
+        <h2>Job Search</h2>
 
       </Grid>
     </Jumbotron>
@@ -32,8 +32,8 @@ class SearchJobs extends Component{
     {/* Display Jobs */}
     <div className = 'container container--vertical'>
       {
-          this.state.jobs.reverse().map((job, i) => (
-            <div key={i} className = 'job'>
+          this.state.jobs.reverse().map((job) => (
+            <div key={job.id} className = 'job'>
               <h3>{ job.title }</h3>
               <strong>{ job.company }</strong>
               <p>{ job.suburb}</p>

@@ -14,7 +14,6 @@ const Home = () => (
     <div className = 'container container--vertical'>
 
       <Button
-        bsStyle="success"
         bsSize="large"
         href="/searchjobs"
         className = "btn--main"
@@ -24,7 +23,6 @@ const Home = () => (
       </Button>
 
       <Button
-        bsStyle="success"
         bsSize="large"
         href="/submitjob"
         className = "btn--main"
@@ -33,7 +31,7 @@ const Home = () => (
         I want to hire a junior dev
         </Button>
 
-      <img src = {running} alt = {'logo'} className = 'image' />
+      <img src = {running} alt = {'image failed to load'} className = 'image' />
     </div>
   </div>
 )

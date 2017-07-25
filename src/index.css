@@ -14,12 +14,26 @@ body {
   flex-direction: column;
 }
 
+.container__feature {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  font-size: 1.2em;
+}
+
 .image {
   width: 200px;
   height:200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+.image--small {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+  margin-bottom: auto;
 }
 
 .heading {
@@ -35,36 +49,18 @@ body {
   width: fit-content;
   padding: 20px;
   margin-bottom: 40px;
+  background-image: linear-gradient(to bottom, #fff 0%, #A3BAD9 100%);
 }
 
-.navbar-brand {
-  margin-right: 40px;
+.btn-default:hover, .btn-default:focus {
+    background-color: #A3BAD9;
+    background-position: 0 -15px;
 }
+
 
 .form-control {
   width: 200px;
 }
-
-
-
-.input-group-addon
-{
-    background-color:#fff;
-    margin-bottom: 20px;
-    pointer-events: none;
-}
-
-.input-group .input-group-addon + .form-control
-{
-    border-left: none;
-    border-right: none;
-}
-
-.input-group-addon:first-child {
-    border-left: 0px;
-    border-right: 0px;
-}
-
 
 
 .left-inner-addon {
@@ -77,20 +73,6 @@ body {
 }
 .left-inner-addon span {
     position: absolute;
-    padding: 7px 12px;
-    pointer-events: none;
-}
-
-.right-inner-addon {
-    position: relative;
-    color: #555;
-}
-.right-inner-addon input {
-    padding-right: 30px;
-}
-.right-inner-addon span {
-    position: absolute;
-    right: 0px;
     padding: 7px 12px;
     pointer-events: none;
 }

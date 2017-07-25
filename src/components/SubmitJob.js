@@ -13,7 +13,6 @@ class SubmitJob extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A job was submitted: ');
     event.preventDefault();
 
     const payload = JSON.stringify(this.state)
@@ -21,7 +20,7 @@ class SubmitJob extends React.Component {
     fetch("http://localhost:3000/jobs", {
       method: "POST",
       body: payload
-    }).then(this.handleRedirect)   
+    }).then(this.handleRedirect)
   }
 
   handleRedirect(res){

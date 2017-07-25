@@ -1,0 +1,7 @@
+.navbar-brand {
+  margin-right: 40px;
+}
+
+.navbar-brand:active {
+  color: #fff;
+}

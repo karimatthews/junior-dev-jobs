@@ -7,6 +7,7 @@ import {
 import './App.css';
 import './SearchJobs.css';
 import './SubmitJob.css';
+import './Topbar.css';
 
 //import components
 import Topbar from './components/Topbar'
