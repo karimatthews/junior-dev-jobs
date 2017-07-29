@@ -28,3 +28,16 @@
 .filter {
   width: 300px;
 }
+
+.count-jobs {
+  margin-left: 100px;
+}
+
+.search {
+  background-image: url("./images/search.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 5% 50%;
+  background-color: inherit;
+  text-indent: 30px;
+}

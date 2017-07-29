@@ -38,12 +38,13 @@ class FilterJobs extends Component{
 
           <br/>
 
-
-          <input type="text" className="form-control" placeholder="Search" value = {this.state.search} onChange = {
-            (event) => {
-              this.setState({search: event.target.value})
-            }
-          } />
+          <div className = 'flex-row'>
+            <input type="text" className="form-control search" placeholder="Search" value = {this.state.search} onChange = {
+              (event) => {
+                this.setState({search: event.target.value})
+              }
+            } />
+          </div>
 
           <br/>
 
