@@ -1,13 +1,11 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
 import './SearchJobs.css';
 import './SubmitJob.css';
 import './Topbar.css';
+
 
 //import components
 import Topbar from './components/Topbar'

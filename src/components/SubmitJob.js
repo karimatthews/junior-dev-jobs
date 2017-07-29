@@ -1,6 +1,8 @@
 import { Grid, Jumbotron} from 'react-bootstrap';
 import React from 'react'
 
+
+
 class SubmitJob extends React.Component {
 
   constructor(props) {
@@ -17,30 +19,26 @@ class SubmitJob extends React.Component {
     fetch("http://localhost:3000/jobs", {
       method: "POST",
       body: payload
-    }).then(this.handleRedirect)
+    }).then(this.handleRedirect.bind(this))
   }
 
   handleRedirect(res){
     if( res.status === 200 ){
       // redirect here
-      window.location.href = 'http://localhost:3001/searchjobs';
+      this.props.history.push('/searchjobs')
     }else {
       // Something went wrong here
     }
   }
 
   render() {
-
-    console.log(this.state)
     return (
-
       <div>
         <Jumbotron>
           <Grid>
             <h2>Submit Job</h2>
           </Grid>
         </Jumbotron>
-
 
       <form className = "form" onSubmit = {this.handleSubmit}>
 
@@ -115,8 +113,6 @@ class SubmitJob extends React.Component {
     )
   }
 }
-
-
 
 
 export default SubmitJob
