@@ -24,9 +24,7 @@ body {
 .image {
   width: 200px;
   height:200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .image--small {
@@ -44,11 +42,10 @@ body {
 }
 
 .btn--main {
-  margin-left: auto;
-  margin-right: auto;
   width: fit-content;
   padding: 20px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
+  margin-top: 40px;
   background-image: linear-gradient(to bottom, #fff 0%, #A3BAD9 100%);
 }
 
@@ -75,4 +72,9 @@ body {
     position: absolute;
     padding: 7px 12px;
     pointer-events: none;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -23,7 +23,7 @@ class FilterJobs extends Component{
     const filteredJobs = this.props.jobs.filter((job) => {
         const matchesSearch = includes(JSON.stringify(job).toLowerCase(), this.state.search.toLowerCase())
         const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
-        const matchesSuburb = (this.state.suburb == 'All suburbs' || includes(this.state.suburb, job.suburb))
+        const matchesSuburb = (this.state.suburb === 'All suburbs' || includes(this.state.suburb, job.suburb))
 
         return matchesWorkType && matchesSearch && matchesSuburb
       })
@@ -121,14 +121,7 @@ class FilterJobs extends Component{
 
 
 const SearchJobs = () => (
-  <div>
-    <Jumbotron>
-      <Grid>
-        <h2>Job Search</h2>
-
-      </Grid>
-    </Jumbotron>
-
+  <div className = 'wrapper'>
     <JobFetcher>
       <FilterJobs />
     </JobFetcher>

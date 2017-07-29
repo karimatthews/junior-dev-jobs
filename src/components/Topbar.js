@@ -18,16 +18,6 @@ const Topbar = () => (
         <Navbar.Toggle />
       </Navbar.Header>
 
-      <Navbar.Header>
-
-        <Navbar.Brand>
-          <Link to="/about">
-            About
-          </Link>
-
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
 
       <Navbar.Header>
 
@@ -54,8 +44,8 @@ const Topbar = () => (
       <Navbar.Header>
 
         <Navbar.Brand>
-          <Link to="/usefullinks">
-            Useful Links
+          <Link to="/about">
+            About
           </Link>
 
         </Navbar.Brand>
