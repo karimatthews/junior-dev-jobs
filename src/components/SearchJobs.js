@@ -1,11 +1,14 @@
 import { Grid, Jumbotron} from 'react-bootstrap';
 import React, {Component} from 'react'
+import uniq from 'lodash/uniq'
+import includes from 'lodash/includes'
 
 class SearchJobs extends Component{
 
   constructor() {
     super()
     this.state = {
+      search: "",
       jobs: [],
       work_types: {internship: true, fulltime: true, parttime: true, casual: true, contract: true}
     }
@@ -34,8 +37,19 @@ class SearchJobs extends Component{
     <div className = 'container'>
       <div className = 'container container--vertical filter'>
         <h3>Filter and refine</h3>
-        <p> Search </p>
-        <p> Work type: </p>
+
+        <br/>
+
+
+        <input type="text" className="form-control" placeholder="Search" value = {this.state.search} onChange = {
+          (event) => {
+            this.setState({search: event.target.value})
+          }
+        } />
+      
+        <br/>
+
+        <strong> Work type: </strong>
 
         <div className="checkbox">
           <label><input type="checkbox" checked={this.state.work_types.internship} onChange = {
@@ -77,16 +91,30 @@ class SearchJobs extends Component{
           }/> Casual</label>
         </div>
 
-        <p> Salary range </p>
-        <p> Location </p>
-        <p>Suburb </p>
+        <br/>
+
+        <div className="form-group">
+          <label for="sel1">Suburb:</label>
+          <select className="form-control" multiple>
+            {
+              uniq(this.state.jobs.map((job) => (
+                job.suburb
+              ))).map((suburb) => (
+                <option> {suburb} </option>
+              ))
+            }
+          </select>
+        </div>
 
       </div>
 
       <div className = 'container container--vertical'>
         {
             this.state.jobs.filter((job) => {
-              return this.state.work_types[job.work_type.split(' ').join('')]
+              const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
+              const matchesSearch = includes(JSON.stringify(job).toLowerCase(), this.state.search.toLowerCase())
+
+              return matchesWorkType && matchesSearch
             }).map((job) => (
               <div key={job.id} className = 'job container container--vertical'>
                 <div className = 'toprow'>
