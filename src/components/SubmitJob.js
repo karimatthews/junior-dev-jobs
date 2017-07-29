@@ -3,9 +3,6 @@ import React from 'react'
 
 class SubmitJob extends React.Component {
 
-
-
-
   constructor(props) {
     super(props);
     this.state = {title: '', company: '', suburb: '', salary: '', work_type: '', description:'', source_link:''};

@@ -8,9 +8,10 @@ class SearchJobs extends Component{
   constructor() {
     super()
     this.state = {
-      search: "",
       jobs: [],
-      work_types: {internship: true, fulltime: true, parttime: true, casual: true, contract: true}
+      search: "",
+      work_types: {internship: true, fulltime: true, parttime: true, casual: true, contract: true},
+      suburb: "All suburbs"
     }
   }
 
@@ -46,7 +47,7 @@ class SearchJobs extends Component{
             this.setState({search: event.target.value})
           }
         } />
-      
+
         <br/>
 
         <strong> Work type: </strong>
@@ -94,13 +95,18 @@ class SearchJobs extends Component{
         <br/>
 
         <div className="form-group">
-          <label for="sel1">Suburb:</label>
-          <select className="form-control" multiple>
+          <label>Suburb:</label>
+          <select className="form-control" value = {this.state.suburb} onChange = {
+            (event) => {
+              this.setState({suburb: event.target.value})
+            }
+          }>
+            <option> All suburbs </option>
             {
               uniq(this.state.jobs.map((job) => (
                 job.suburb
               ))).map((suburb) => (
-                <option> {suburb} </option>
+                <option key= {suburb}> {suburb} </option>
               ))
             }
           </select>
@@ -111,10 +117,12 @@ class SearchJobs extends Component{
       <div className = 'container container--vertical'>
         {
             this.state.jobs.filter((job) => {
-              const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
               const matchesSearch = includes(JSON.stringify(job).toLowerCase(), this.state.search.toLowerCase())
+              const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
+              const matchesSuburb = (this.state.suburb == 'All suburbs' || includes(this.state.suburb, job.suburb))
 
-              return matchesWorkType && matchesSearch
+
+              return matchesWorkType && matchesSearch && matchesSuburb
             }).map((job) => (
               <div key={job.id} className = 'job container container--vertical'>
                 <div className = 'toprow'>
