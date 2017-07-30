@@ -2,7 +2,6 @@
   "name": "junior-dev-jobs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://karimatthews.github.io/junior-dev-jobs",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "history": "^4.6.3",
