@@ -11,7 +11,7 @@ class JobFetcher extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:3000/jobs').then((response) => {
+    fetch('https://junior-dev-jobs-backend.herokuapp.com/jobs').then((response) => {
       return response.json()
     }).then((json) => {
       this.setState({ jobs: json.reverse() })

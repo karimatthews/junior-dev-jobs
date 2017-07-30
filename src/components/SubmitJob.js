@@ -16,7 +16,7 @@ class SubmitJob extends React.Component {
 
     const payload = JSON.stringify(this.state)
 
-    fetch("http://localhost:3000/jobs", {
+    fetch("https://junior-dev-jobs-backend.herokuapp.com/jobs", {
       method: "POST",
       body: payload
     }).then(this.handleRedirect.bind(this))
