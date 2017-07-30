@@ -1,3 +1,8 @@
+.navbar {
+  background-color: #0F1626;
+  background-image: none;
+}
+
 .navbar-brand {
   margin-right: 40px;
 }

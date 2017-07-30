@@ -1,4 +1,4 @@
-import { Grid, Jumbotron} from 'react-bootstrap';
+
 import React, {Component} from 'react'
 import uniq from 'lodash/uniq'
 import includes from 'lodash/includes'

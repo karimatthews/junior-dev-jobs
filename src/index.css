@@ -1,9 +1,22 @@
 /* This is the primary CSS file*/
 
+/*
+Colours:
+#0F1626;
+#8E95A5;
+#AB987A;
+#FF533D;
+#F5F5F5;
+*/
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+a {
+  color: #FF533D;
 }
 
 .container {
@@ -41,18 +54,7 @@ body {
   margin-bottom: 0px;
 }
 
-.btn--main {
-  width: fit-content;
-  padding: 20px;
-  /*margin-bottom: 40px;*/
-  margin-top: 40px;
-  background-image: linear-gradient(to bottom, #fff 0%, #A3BAD9 100%);
-}
 
-.btn-default:hover, .btn-default:focus {
-    background-color: #A3BAD9;
-    background-position: 0 -15px;
-}
 
 
 .form-control {
@@ -77,4 +79,16 @@ body {
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-size: 1.2em;
 }

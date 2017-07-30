@@ -1,4 +1,4 @@
-import { Grid, Jumbotron} from 'react-bootstrap';
+
 import React from 'react'
 
 
@@ -70,7 +70,7 @@ class SubmitJob extends React.Component {
             <label>Work Type: *
             <select value = {this.state.work_type} onChange = {(event) => {this.setState({work_type: event.target.value})}}
               className="form-control" name="work_type" min = "0" max = '200000'  required = "true">
-              <option value ="" disabled selected> -- select an option -- </option>
+              <option value ="" disabled > -- select an option -- </option>
               <option> Full Time </option>
               <option> Part Time </option>
               <option> Internship </option>
