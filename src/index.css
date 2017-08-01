@@ -97,3 +97,8 @@ a:visited {
 .flex-row {
   display: flex;
 }
+
+.show-more {
+  cursor: pointer;
+  margin-left: auto;
+}
