@@ -19,6 +19,11 @@ a {
   color: #FF533D;
 }
 
+a:visited {
+  color: #FF533D;
+  text-decoration: none;
+}
+
 .container {
   display: flex;
 }

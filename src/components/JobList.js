@@ -28,6 +28,8 @@ const JobList = ({ jobs }) => (
               job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p>
             }
             <p>{ job.description}</p>
+
+            <a href = {job.source_link} target = '_blank' rel = 'noopener noreferrer'> See original listing</a>
           </div>
         ))
     }
