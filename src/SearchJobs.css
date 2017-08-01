@@ -3,7 +3,7 @@
   padding: 20px;
   width: 600px;
   border-radius: 5px;
-  margin-left: 100px;
+  margin-left: 0px;
   border: 1px solid black;
   margin-bottom: 40px;
   margin-top: 10px;
@@ -30,7 +30,7 @@
 }
 
 .count-jobs {
-  margin-left: 100px;
+  margin-left: 0px;
 }
 
 .search {

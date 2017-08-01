@@ -16,8 +16,6 @@ class FilterJobs extends Component{
     }
   }
 
-
-
   render() {
 
     const filteredJobs = this.props.jobs.filter((job) => {
@@ -32,14 +30,14 @@ class FilterJobs extends Component{
 
     return (
 
-      <div className = 'container'>
-        <div className = 'container container--vertical filter'>
+      <div className = 'wrapper'>
+        <div className = ' container container--vertical filter'>
           <h3>Filter and refine</h3>
 
           <br/>
 
           <div className = 'flex-row'>
-            <input type="text" className="form-control search" placeholder="Search" value = {this.state.search} onChange = {
+            <input type="text" className="form-control search form-control--narrow" placeholder="Search" value = {this.state.search} onChange = {
               (event) => {
                 this.setState({search: event.target.value})
               }
@@ -94,7 +92,7 @@ class FilterJobs extends Component{
 
           <div className="form-group">
             <label>Suburb:</label>
-            <select className="form-control" value = {this.state.suburb} onChange = {
+            <select className="form-control form-control--narrow suburb" value = {this.state.suburb} onChange = {
               (event) => {
                 this.setState({suburb: event.target.value})
               }
@@ -121,11 +119,9 @@ class FilterJobs extends Component{
 
 
 const SearchJobs = () => (
-  <div className = 'wrapper'>
     <JobFetcher>
       <FilterJobs />
     </JobFetcher>
-  </div>
 )
 
 export default SearchJobs

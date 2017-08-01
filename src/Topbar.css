@@ -1,6 +1,7 @@
 .navbar {
   background-color: #0F1626;
   background-image: none;
+  margin-left: 0px;
 }
 
 .navbar-brand {
@@ -13,4 +14,12 @@
 
 .navbar-brand--logo {
   margin-left: 200px;
+}
+
+.image--small {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+  margin-bottom: auto;
+  margin-left: 40px;
 }
