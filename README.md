@@ -4,7 +4,7 @@ This app aims to fill a gap in the Melbourne software development community. Cur
 
 Junior Dev Jobs gathers all these opportunities into one place and and updates users through email subscriptions (still coming). No sign in is required and and jobs can be added by anyone (although they are regularly monitored for spam).
 
-![Screenshot of application]('/images/screenshot.png')
+![Screenshot of application](/images/screenshot.png)
 
 # Usage
 
