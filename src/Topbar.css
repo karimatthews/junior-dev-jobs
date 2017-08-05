@@ -16,10 +16,10 @@
   margin-left: 200px;
 }
 
-.image--small {
+.image--topbar {
   width: 30px;
   height: 30px;
   margin-top: -5px;
   margin-bottom: auto;
-  margin-left: 40px;
+  margin-left: 80px;
 }

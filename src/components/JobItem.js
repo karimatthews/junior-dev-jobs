@@ -22,11 +22,15 @@ class JobItem extends Component {
 
         </div>
 
-        <p> <strong>{ job.company }</strong> - { job.suburb}</p>
+        <p>
+          <strong> { job.company } </strong> -
+          <span> { job.suburb } </span> -
+          <span style = { {textTransform: 'capitalize'} }> { job.work_type }</span>
+        </p>
 
         { job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p> }
 
-        <p style = { {textTransform: 'capitalize'} }> { job.work_type }</p>
+
 
         { this.state.expanded ?
           <div>
@@ -34,15 +38,14 @@ class JobItem extends Component {
             <a href = { job.source_link } target = '_blank' rel = 'noopener noreferrer'> See original listing</a>
           </div> :
           <div>
-            <p>{ job.description.split(' ').slice(0, 10).join(' ') }...</p>
+            <p>{ job.description.split(' ').slice(0, 20).join(' ') }...</p>
 
           </div>
-
         }
 
 
         <span className = 'show-more' onClick = { () => { this.setState({ expanded: !this.state.expanded }) } }>
-          { this.state.expanded ? '- show less' : '+ read more' }
+          { this.state.expanded ? '- read less' : '+ read more' }
         </span>
 
       </div>
