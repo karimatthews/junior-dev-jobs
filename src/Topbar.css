@@ -6,20 +6,17 @@
 
 .navbar-brand {
   margin-right: 40px;
+  /*padding-left: 0;*/
 }
 
 .navbar-item a {
   text-decoration: none;
   color: inherit;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .navbar-brand:active {
   color: #fff;
-}
-
-.navbar-brand--logo {
-  margin-left: 200px;
 }
 
 .image--topbar {
@@ -27,5 +24,8 @@
   height: 30px;
   margin-top: -5px;
   margin-bottom: auto;
-  margin-left: 80px;
+}
+
+.margin-set {
+  margin-left: 10%;
 }

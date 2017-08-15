@@ -36,7 +36,7 @@ class FilterJobs extends Component{
 
           <br/>
 
-          <div className = 'flex-row'>
+          <div className = 'flex-row' style = {{backgroundColor: '#fff'}}>
             <input type="text" className="form-control search form-control--narrow" placeholder="Search" value = {this.state.search} onChange = {
               (event) => {
                 this.setState({search: event.target.value})

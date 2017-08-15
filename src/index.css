@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #F5F5F5;
 }
 
 a {
@@ -42,7 +43,7 @@ a:visited {
   flex-wrap: wrap;
   margin-top: 100px;
   font-size: 1.2em;
-  margin-left: 100px;
+  margin-left: 10%;
 }
 
 
@@ -88,6 +89,7 @@ a:visited {
 .left-inner-addon span {
     position: absolute;
     padding: 7px 12px;
+    padding-top: 3px;
     pointer-events: none;
 }
 
