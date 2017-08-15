@@ -30,18 +30,16 @@ class JobItem extends Component {
 
         { job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p> }
 
-
         { this.state.expanded ?
           <div>
             <p>{ job.description }</p>
             <a href = { job.source_link } target = '_blank' rel = 'noopener noreferrer'> See original listing</a>
           </div> :
           <div>
-            <p>{ job.description.split(' ').slice(0, 20).join(' ') }...</p>
+            <p>{ job.description.length > 20 ? job.description.split(' ').slice(0, 20).join(' ') + "..." : job.description }</p>
 
           </div>
         }
-
 
         <span className = 'show-more' onClick = { () => { this.setState({ expanded: !this.state.expanded }) } }>
           { this.state.expanded ? '- read less' : '+ read more' }
