@@ -10,8 +10,6 @@ const Home = () => (
 
     <h1> Melbourne Junior Dev Jobs </h1>
 
-
-
     <div className = ''>
       <Link to="/searchjobs">
         <Button
