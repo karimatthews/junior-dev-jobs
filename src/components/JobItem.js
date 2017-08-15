@@ -31,7 +31,6 @@ class JobItem extends Component {
         { job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p> }
 
 
-
         { this.state.expanded ?
           <div>
             <p>{ job.description }</p>
