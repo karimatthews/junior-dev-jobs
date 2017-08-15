@@ -1,47 +1,42 @@
-import { Grid, Navbar } from 'react-bootstrap';
+import { Grid, Navbar, Nav, NavItem} from 'react-bootstrap';
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../images/logo.svg'
 
 const Topbar = () => (
-  <Navbar inverse fixedTop>
-    <Grid>
-      <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/">
-            <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
-          </Link>
-        </Navbar.Brand>
-      </Navbar.Header>
+  <Navbar inverse fixedTop fluid collapseOnSelect>
+        <Navbar.Header>
 
+            <Navbar.Brand>
+              <Link to="/">
+                <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
+              </Link>
+            </Navbar.Brand>
 
-      <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/searchjobs">
-            Job Search
-          </Link>
-        </Navbar.Brand>
-      </Navbar.Header>
+            <Navbar.Toggle />
+        </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav>
+          <NavItem className = 'navbar-item'>
+            <Link to="/searchjobs">
+              Job Search
+            </Link>
+          </NavItem>
 
-      <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/submitjob">
-            Submit Job
-          </Link>
-        </Navbar.Brand>
-      </Navbar.Header>
+          <NavItem className = 'navbar-item'>
+            <Link to="/submitjob">
+              Submit Job
+            </Link>
+          </NavItem>
 
-      <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/about">
-            About
-          </Link>
-        </Navbar.Brand>
-      </Navbar.Header>
-
-      <Navbar.Toggle />
-    </Grid>
+          <NavItem className = 'navbar-item'>
+            <Link to="/about">
+              About
+            </Link>
+          </NavItem>
+        </Nav>
+      </Navbar.Collapse>
    </Navbar>
  )
 
