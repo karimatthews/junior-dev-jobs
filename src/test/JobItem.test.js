@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import JobItem from '../components/JobItem';
 
-fdescribe( 'JobItem Component', () => {
+describe( 'JobItem Component', () => {
   // define a job we can work with (this could be extracted later with factorygirl)
   let job
   beforeEach(() => {
@@ -24,7 +24,7 @@ fdescribe( 'JobItem Component', () => {
   })
 
   describe('when the job item is not expanded', () => {
-    describe('when the description is less than 20 char', () => {
+    describe('when the description is less than 20 words', () => {
       it('renders the whole description', () => {
         const wrapper =  shallow(<JobItem  job={job}/>);
         const description = <p>This is a job.</p>;
@@ -32,13 +32,37 @@ fdescribe( 'JobItem Component', () => {
       })
     })
 
-    describe('when the description is greater than 20 char', () => {
+    describe('when the description is greater than 20 words', () => {
       beforeEach(() => {
         job.description = "q w e r t y u i o p a s d f g h j k l z x cv b n m"
       })
-      it('renders 20 char of the description', () => {
+      it('renders 20 words of the description', () => {
         const wrapper =  shallow(<JobItem  job={job}/>);
         const description = <p>q w e r t y u i o p a s d f g h j k l z...</p>;
+        expect(wrapper).toContainReact(description)
+      })
+    })
+  })
+
+  describe('when the job item is expanded', () => {
+    describe('when the description is less than 20 words', () => {
+      it('renders the whole description', () => {
+        const wrapper = shallow(<JobItem  job={job}/>);
+        wrapper.setState({expanded: true});
+        const description = <p>This is a job.</p>;
+        expect(wrapper).toContainReact(description)
+      })
+    })
+
+    describe('when the description is greater than 20 words', () => {
+      // set the description to be greater than 20 words
+      beforeEach(() => {
+        job.description = "q w e r t y u i o p a s d f g h j k l z x cv b n m"
+      })
+      it('renders the whole description', () => {
+        const wrapper = shallow(<JobItem  job={job}/>);
+        wrapper.setState({expanded: true});
+        const description = <p>q w e r t y u i o p a s d f g h j k l z x cv b n m</p>;
         expect(wrapper).toContainReact(description)
       })
     })
