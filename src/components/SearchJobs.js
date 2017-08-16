@@ -5,6 +5,9 @@ import includes from 'lodash/includes'
 import JobFetcher from './JobFetcher'
 import JobList from './JobList'
 
+
+
+
 class FilterJobs extends Component{
 
   constructor() {
@@ -18,15 +21,19 @@ class FilterJobs extends Component{
 
   render() {
 
-    const filteredJobs = this.props.jobs.filter((job) => {
+    let filteredJobs
+
+    if (this.props.jobs == null) {
+      filteredJobs = []
+    } else {
+     filteredJobs = this.props.jobs.filter((job) => {
         const matchesSearch = includes(JSON.stringify(job).toLowerCase(), this.state.search.toLowerCase())
         const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
         const matchesSuburb = (this.state.suburb === 'All suburbs' || includes(this.state.suburb, job.suburb))
 
         return matchesWorkType && matchesSearch && matchesSuburb
       })
-
-
+    }
 
     return (
 
@@ -99,6 +106,8 @@ class FilterJobs extends Component{
             }>
               <option> All suburbs </option>
               {
+                this.props.jobs
+                &&
                 uniq(this.props.jobs.map((job) => (
                   job.suburb
                 ))).map((suburb) => (
@@ -110,8 +119,8 @@ class FilterJobs extends Component{
 
         </div>
 
-        <JobList jobs={filteredJobs} />
-
+        {this.props.jobs ? <JobList jobs={filteredJobs} /> : <div> Loading... </div> }
+        
       </div>
   )
 }}

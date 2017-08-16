@@ -6,7 +6,7 @@ class JobFetcher extends Component {
   constructor() {
     super()
     this.state = {
-      jobs: []
+      jobs: null
     }
   }
 
@@ -19,6 +19,7 @@ class JobFetcher extends Component {
   }
 
   render() {
+    // Give all children of Jobfetcher a jobs prop (this.state.props)
     return (
       <div>
 
