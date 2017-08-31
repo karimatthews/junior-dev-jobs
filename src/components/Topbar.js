@@ -1,6 +1,6 @@
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap';
 
 import logo from '../images/logo.svg'
 
@@ -8,35 +8,34 @@ const Topbar = () => (
   <Navbar inverse fixedTop fluid collapseOnSelect>
     <div className = 'margin-set'>
       <Navbar.Header>
+        <LinkContainer to="/">
+          <NavItem id = 'logo'>
+            <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
+          </NavItem>
+        </LinkContainer>
 
-          <Navbar.Brand>
-            <Link to="/">
-              <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
-            </Link>
-          </Navbar.Brand>
-
-          <Navbar.Toggle />
+        <Navbar.Toggle />
       </Navbar.Header>
 
       <Navbar.Collapse>
-        <Nav>
-          <NavItem className = 'navbar-item'>
-            <Link to="/searchjobs">
-              Job Search
-            </Link>
-          </NavItem>
+        <Nav pullRight>
+          <LinkContainer to="/searchjobs">
+            <NavItem className = 'navbar-item'>
+                Job Search
+            </NavItem>
+          </LinkContainer>
 
-          <NavItem className = 'navbar-item'>
-            <Link to="/submitjob">
-              Submit Job
-            </Link>
-          </NavItem>
+          <LinkContainer to="/submitjob">
+            <NavItem className = 'navbar-item'>
+                Submit Job
+            </NavItem>
+          </LinkContainer>
 
-          <NavItem className = 'navbar-item'>
-            <Link to="/about">
-              About
-            </Link>
-          </NavItem>
+          <LinkContainer to="/about">
+            <NavItem className = 'navbar-item'>
+                About
+            </NavItem>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </div>
