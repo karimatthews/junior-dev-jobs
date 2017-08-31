@@ -1,4 +1,12 @@
 .btn--home {
+  margin-top: 60px;
+  width: 400px;
+}
+
+/*MOBILE ONLY STYLES 768px- */
+@media screen and (max-width: 768px) {
+  .btn--home {
     margin-top: 60px;
-    
+    max-width: 100%;
+  }
 }

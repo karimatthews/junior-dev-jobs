@@ -1,12 +1,22 @@
 form {
   width: 400px;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-primary {
   margin-top: 20px;
+  width: 200px;
 }
 
 .form-group {
   margin-bottom: 20px;
+}
+
+/*MOBILE ONLY STYLES 768px- */
+@media screen and (max-width: 768px) {
+  .btn-primary {
+    margin-left: auto;
+  }
 }
