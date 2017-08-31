@@ -42,7 +42,7 @@ class SubmitJob extends React.Component {
             <div className="form-group">
               <label className = 'col-4'>Job Title: *
                 <input type="text" value = {this.state.title} onChange = {(event) => {this.setState({title: event.target.value})}}
-                  className="form-control" name="title" required = "true"/>
+                    className="form-control" name="title" required = "true" autoCorrect="off" autoCapitalize="words"/>
               </label>
             </div>
 
@@ -51,7 +51,7 @@ class SubmitJob extends React.Component {
             <div className="form-group">
               <label>Company:
               <input type="text" value = {this.state.company} onChange = {(event) => {this.setState({company: event.target.value})}}
-                className="form-control" name="company"  />
+                className="form-control" name="company"  autoCorrect="off" autoCapitalize="words"/>
               </label>
             </div>
 
@@ -85,7 +85,7 @@ class SubmitJob extends React.Component {
             <div className="form-group">
               <label>Suburb:
               <input type="text" value = {this.state.suburb} onChange = {(event) => {this.setState({suburb: event.target.value})}}
-                className="form-control" name="suburb" />
+                className="form-control" name="suburb" autoCorrect="off" autoCapitalize="words"/>
               </label>
             </div>
 
