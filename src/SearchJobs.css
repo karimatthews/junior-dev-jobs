@@ -1,15 +1,14 @@
 .job {
   background-color: #fff;
   padding: 20px;
-  width: 600px;
+  width: fit-content;
   border-radius: 5px;
-  margin-left: 0px;
   border: 1px solid black;
   margin-bottom: 40px;
   margin-top: 10px;
-
+  margin-left: 0px;
+  margin-right: 0;
 }
-
 
 .topright {
   margin-left: auto;
@@ -27,10 +26,12 @@
 
 .filter {
   width: 300px;
+  max-width: 100%;
 }
 
 .count-jobs {
   margin-left: 0px;
+  margin-top: 25px;
 }
 
 .search {
@@ -41,4 +42,18 @@
   background-position: 5% 50%;
   background-color: inherit;
   text-indent: 30px;
+}
+
+/*DESKTOP ONLY STYLES 768px+ */
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-right: 40px;
+  }
+}
+
+/*MOBILE ONLY STYLES 768px- */
+@media screen and (max-width: 768px) {
+  .filter {
+    width: 100%;
+  }
 }

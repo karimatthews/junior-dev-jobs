@@ -35,7 +35,12 @@ class SubmitJob extends React.Component {
     return (
       <div className = 'wrapper '>
 
-        <div className = 'container'>
+
+        <div className = 'container container--vertical'>
+
+          <h3>Submit Job</h3>
+
+          <br/>
 
           <form onSubmit = {this.handleSubmit}>
 
@@ -46,7 +51,6 @@ class SubmitJob extends React.Component {
               </label>
             </div>
 
-            <br />
 
             <div className="form-group">
               <label>Company:

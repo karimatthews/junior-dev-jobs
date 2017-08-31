@@ -35,25 +35,30 @@
   margin-top: -5px;;
   margin-bottom: 0;
   margin-left: 0;
-  /*margin-right: 100px;*/
-}
-
-.margin-set {
-  /*margin-left: 10%;*/
-  margin-right: 10%;
-  position: relative;
 }
 
 .container-fluid {
   padding: 0;
   margin-left: 10%;
-  position: relative;
+  margin-right: 10%;
+}
+
+.navbar-toggle {
+  margin-right: 0;
 }
 
 @media screen and (min-width: 768px) {
-/* applies only if the screen is wider than 768px*/
-.navbar-brand {
-  padding-left: 15px;
-  /*margin-left: 10%;*/
+  /* applies only if the screen is wider than 768px*/
+  .navbar-brand {
+    padding-left: 15px;
+    /*margin-left: 10%;*/
+  }
 }
+
+@media screen and (max-width: 768px) {
+  /* applies only if the screen is narrower than 768px*/
+  .container-fluid {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

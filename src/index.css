@@ -30,6 +30,8 @@ a:visited {
   margin-right: 20px;
   margin-left: 0px;
   padding: 0;
+  width: contents;
+  max-width: 100%;
 }
 
 .container--vertical {
@@ -37,15 +39,18 @@ a:visited {
   flex-direction: column;
   max-width: 600px;
   margin-left: 0px;
+  max-width: 100%;
 }
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   font-size: 1.2em;
   margin-left: 10%;
-  margin-right: 10%
+  margin-right: 10%;
+  max-width: 100%;
 }
 
 
@@ -70,13 +75,9 @@ a:visited {
 
 
 
-
 .form-control {
   width: 400px;
-}
-
-.suburb {
-  width: 270px;
+  max-width: 100%;
 }
 
 
@@ -102,9 +103,28 @@ a:visited {
 
 .flex-row {
   display: flex;
+  background-color: #fff;
+  width: 400px;
+  max-width: 100%;
 }
 
 .show-more {
   cursor: pointer;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  /* applies only if the screen is wider than 768px*/
+  .wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* applies only if the screen is narrower than 768px*/
+  .wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 40px;
+  }
 }

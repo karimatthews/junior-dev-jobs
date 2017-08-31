@@ -5,7 +5,7 @@ import JobItem from './JobItem'
 
 const JobList = ({ jobs=[] }) => (
 
-  <div className = 'container container--vertical'>
+  <div className = 'container--vertical'>
     <span className = 'count-jobs'>Your search has returned { jobs.length } job{ (jobs.length !== 1) && 's' }.</span>
     <br />
 

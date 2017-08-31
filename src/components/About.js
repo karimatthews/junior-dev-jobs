@@ -6,10 +6,18 @@ const UsefulLinks = () => (
   <div className = 'wrapper'>
 
     <div className = 'container container--vertical'>
+      <h3>About</h3>
+
       <div className = 'block'>
         <p>
-          Feel free to help improve this site. You can raise an issue or submit a pull request via
-          <a href = 'https://github.com/karimatthews/junior-dev-jobs' target = '_blank' rel="noopener noreferrer"> GitHub</a>.
+          This site is made by Junior Developers based in Melbourne Australia, specifically for the use of other local juniors.
+          It aims to be a clear and user-friendly resource for job-seekers.
+        </p>
+        <br/>
+        <p>
+          We'd love you help improving the experience for everyone. You can raise an issue or submit a pull request via
+          <span> </span>
+          <a href = 'https://github.com/karimatthews/junior-dev-jobs' target = '_blank' rel="noopener noreferrer">GitHub</a>.
         </p>
       </div>
     </div>

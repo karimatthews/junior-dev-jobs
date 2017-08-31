@@ -39,11 +39,11 @@ class FilterJobs extends Component{
 
       <div className = 'wrapper'>
         <div className = ' container container--vertical filter'>
-          <h3>Filter and refine</h3>
+          <h3>Search Jobs</h3>
 
           <br/>
 
-          <div className = 'flex-row' style = {{backgroundColor: '#fff'}}>
+          <div className = 'flex-row' >
             <input type="text" className="form-control search form-control--narrow" placeholder="Search" value = {this.state.search} onChange = {
               (event) => {
                 this.setState({search: event.target.value})
@@ -99,7 +99,7 @@ class FilterJobs extends Component{
 
           <div className="form-group">
             <label>Suburb:</label>
-            <select className="form-control form-control--narrow suburb" value = {this.state.suburb} onChange = {
+            <select className="form-control suburb" value = {this.state.suburb} onChange = {
               (event) => {
                 this.setState({suburb: event.target.value})
               }
@@ -120,7 +120,7 @@ class FilterJobs extends Component{
         </div>
 
         {this.props.jobs ? <JobList jobs={filteredJobs} /> : <div> Loading... </div> }
-        
+
       </div>
   )
 }}
