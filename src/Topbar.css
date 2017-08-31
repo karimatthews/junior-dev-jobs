@@ -2,30 +2,35 @@
   background-color: #0F1626;
   background-image: none;
   margin-left: 0px;
+  padding-left: 0;
 }
 
-.navbar-brand {
-  margin-right: 40px;
-  /*padding-left: 0;*/
+.navbar-header {
+  width: 30px;
 }
 
-.navbar-item a {
-  text-decoration: none;
-  color: inherit;
+.navbar-link {
   font-size: 1.1em;
 }
 
-.navbar-brand:active {
-  color: #fff;
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav >
+.active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #0F1626;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+    background-image: none;
 }
 
 .image--topbar {
   width: 30px;
   height: 30px;
-  margin-top: -5px;
+  margin-top: -10px;;
   margin-bottom: auto;
+  margin-left: 0;
 }
 
 .margin-set {
   margin-left: 10%;
+  margin-right: 10%;
 }

@@ -9,7 +9,7 @@ const Topbar = () => (
     <div className = 'margin-set'>
       <Navbar.Header>
         <LinkContainer to="/">
-          <NavItem id = 'logo'>
+          <NavItem>
             <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
           </NavItem>
         </LinkContainer>
@@ -19,19 +19,19 @@ const Topbar = () => (
 
       <Navbar.Collapse>
         <Nav pullRight>
-          <LinkContainer to="/searchjobs">
+          <LinkContainer className = 'navbar-link'  to="/searchjobs">
             <NavItem className = 'navbar-item'>
                 Job Search
             </NavItem>
           </LinkContainer>
 
-          <LinkContainer to="/submitjob">
+          <LinkContainer className = 'navbar-link' to="/submitjob">
             <NavItem className = 'navbar-item'>
                 Submit Job
             </NavItem>
           </LinkContainer>
 
-          <LinkContainer to="/about">
+          <LinkContainer className = 'navbar-link'  to="/about">
             <NavItem className = 'navbar-item'>
                 About
             </NavItem>
