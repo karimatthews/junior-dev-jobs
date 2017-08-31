@@ -29,6 +29,7 @@ a:visited {
   display: flex;
   margin-right: 20px;
   margin-left: 0px;
+  padding: 0;
 }
 
 .container--vertical {

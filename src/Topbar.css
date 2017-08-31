@@ -3,14 +3,21 @@
   background-image: none;
   margin-left: 0px;
   padding-left: 0;
+  /*box-sizing: border-box;*/
+  position: relative;
+}
+
+.navbar-brand {
+  padding-left: 0;
+  /*margin-left: 10%;*/
 }
 
 .navbar-header {
-  width: 30px;
+ position: relative;
 }
 
 .navbar-link {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav >
@@ -19,18 +26,34 @@
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
-    background-image: none;
+  background-image: none;
 }
 
 .image--topbar {
   width: 30px;
   height: 30px;
-  margin-top: -10px;;
-  margin-bottom: auto;
+  margin-top: -5px;;
+  margin-bottom: 0;
   margin-left: 0;
+  /*margin-right: 100px;*/
 }
 
 .margin-set {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   margin-right: 10%;
+  position: relative;
+}
+
+.container-fluid {
+  padding: 0;
+  margin-left: 10%;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+/* applies only if the screen is wider than 768px*/
+.navbar-brand {
+  padding-left: 15px;
+  /*margin-left: 10%;*/
+}
 }

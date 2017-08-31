@@ -1,6 +1,7 @@
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom'
 
 import logo from '../images/logo.svg'
 
@@ -8,11 +9,11 @@ const Topbar = () => (
   <Navbar inverse fixedTop fluid collapseOnSelect>
     <div className = 'margin-set'>
       <Navbar.Header>
-        <LinkContainer to="/">
-          <NavItem>
-            <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
-          </NavItem>
-        </LinkContainer>
+          <Navbar.Brand>
+            <Link to="/">
+              <img src = {logo} alt = {'failed to load'} className = 'image--topbar' />
+            </Link>
+          </Navbar.Brand>
 
         <Navbar.Toggle />
       </Navbar.Header>
