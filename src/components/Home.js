@@ -7,11 +7,11 @@ const Home = () => (
 
   <div className="wrapper">
     <MetaTags>
-       {/* <title>Page 1</title> */}
+       <title>Junior Developer Jobs</title>
        <meta id="meta-description" name="description" content=
          "Melbourne Junior Dev Jobs exists to help local junior developers get thier start in the tech world."
        />
-       {/* <meta id="og-title" property="og:title" content="MyApp" /> */}
+       <meta id="og-title" property="og:title" content="MyApp" />
        <meta id="og-image" property="og:image" content="images/logo.svg" />
     </MetaTags>
 
