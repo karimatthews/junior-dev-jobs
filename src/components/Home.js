@@ -1,19 +1,12 @@
 import { Button } from 'react-bootstrap';
 import React from 'react'
 import { Link } from 'react-router-dom'
-import MetaTags from 'react-meta-tags';
+
 
 const Home = () => (
 
   <div className="wrapper">
-    <MetaTags>
-       <title>Junior Developer Jobs</title>
-       <meta id="meta-description" name="description" content=
-         "Melbourne Junior Dev Jobs exists to help local junior developers get thier start in the tech world."
-       />
-       <meta id="og-title" property="og:title" content="MyApp" />
-       <meta id="og-image" property="og:image" content="images/logo.svg" />
-    </MetaTags>
+    
 
     <div id = 'landing-background'>
 
