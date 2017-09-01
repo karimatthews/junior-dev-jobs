@@ -13,7 +13,7 @@ class FilterJobs extends Component{
     super()
     this.state = {
       search: "",
-      work_types: {internship: true, fulltime: true, parttime: true, casual: true, contract: true},
+      work_types: {unknown: true, internship: true, fulltime: true, parttime: true, casual: true, contract: true},
       suburb: "All suburbs"
     }
   }
@@ -82,6 +82,14 @@ class FilterJobs extends Component{
                 this.setState({work_types: { ...this.state.work_types, casual: event.target.checked}})
               }
             }/> Casual</label>
+          </div>
+
+          <div className="checkbox">
+            <label><input type="checkbox" checked={this.state.work_types.unknown} onChange = {
+              (event) => {
+                this.setState({work_types: { ...this.state.work_types, unknown: event.target.checked}})
+              }
+            }/> Unknown</label>
           </div>
 
           <br/>

@@ -23,9 +23,11 @@ class JobItem extends Component {
         </div>
 
         <p>
-          <strong> { job.company } </strong> -
-          <span> { job.suburb } </span> -
-          <span style = { {textTransform: 'capitalize'} }> { job.work_type }</span>
+          <strong> { job.company } </strong>
+
+          {job.suburb ? <span> - { job.suburb } </span> : ""}
+
+          { job.work_type === "unknown" ? "" : <span style = { {textTransform: 'capitalize'} }>- { job.work_type }</span>}
         </p>
 
         { job.formatted_salary && <p>Salary: ${ job.formatted_salary}</p> }

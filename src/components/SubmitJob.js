@@ -75,13 +75,14 @@ class SubmitJob extends React.Component {
             <div className="form-group">
               <label>Work Type:
               <select value = {this.state.work_type} onChange = {(event) => {this.setState({work_type: event.target.value})}}
-                className="form-control" name="work_type" min = "0" max = '200000'  >
+                className="form-control" name="work_type" required = "true" min = "0" max = '200000'  >
                 <option value ="" disabled > -- select an option -- </option>
                 <option> Full Time </option>
                 <option> Part Time </option>
                 <option> Internship </option>
                 <option> Contract </option>
                 <option> Casual </option>
+                <option> Unknown </option>
               </select>
               </label>
             </div>
