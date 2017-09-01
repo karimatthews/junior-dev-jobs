@@ -1,10 +1,21 @@
 import { Button } from 'react-bootstrap';
 import React from 'react'
 import { Link } from 'react-router-dom'
+import MetaTags from 'react-meta-tags';
 
 const Home = () => (
 
-  <div id = 'landing-background'>
+  <div className="wrapper">
+    <MetaTags>
+       {/* <title>Page 1</title> */}
+       <meta id="meta-description" name="description" content=
+         "Melbourne Junior Dev Jobs exists to help local junior developers get thier start in the tech world."
+       />
+       {/* <meta id="og-title" property="og:title" content="MyApp" /> */}
+       <meta id="og-image" property="og:image" content="images/logo.svg" />
+    </MetaTags>
+
+    <div id = 'landing-background'>
 
     <div className = 'centered'>
       <h1 className = 'landing-title'> Melbourne Junior Dev Jobs </h1>
@@ -33,8 +44,7 @@ const Home = () => (
           </Link>
         </div>
       </div>
-
-
+    </div>
   </div>
 )
 
