@@ -15,7 +15,7 @@ const UsefulLinks = () => (
         </p>
         <br/>
         <p>
-          We'd love you help improving the experience for everyone. You can raise an issue or submit a pull request via
+          We'd love your help improving the experience for everyone. You can raise an issue or submit a pull request via
           <span> </span>
           <a href = 'https://github.com/karimatthews/junior-dev-jobs' target = '_blank' rel="noopener noreferrer">GitHub</a>.
         </p>

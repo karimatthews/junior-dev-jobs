@@ -3,8 +3,8 @@
   background-image: none;
   margin-left: 0px;
   padding-left: 0;
-  /*box-sizing: border-box;*/
   position: relative;
+  margin-bottom: 0;
 }
 
 .navbar-brand {

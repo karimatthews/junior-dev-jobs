@@ -9,7 +9,6 @@ import JobList from './JobList'
 
 
 class FilterJobs extends Component{
-
   constructor() {
     super()
     this.state = {
@@ -18,11 +17,8 @@ class FilterJobs extends Component{
       suburb: "All suburbs"
     }
   }
-
   render() {
-
     let filteredJobs
-
     if (this.props.jobs == null) {
       filteredJobs = []
     } else {
@@ -30,19 +26,14 @@ class FilterJobs extends Component{
         const matchesSearch = includes(JSON.stringify(job).toLowerCase(), this.state.search.toLowerCase())
         const matchesWorkType = this.state.work_types[job.work_type.split(' ').join('')]
         const matchesSuburb = (this.state.suburb === 'All suburbs' || includes(this.state.suburb, job.suburb))
-
         return matchesWorkType && matchesSearch && matchesSuburb
       })
     }
-
     return (
-
       <div className = 'wrapper'>
         <div className = ' container container--vertical filter'>
           <h3>Search Jobs</h3>
-
           <br/>
-
           <div className = 'flex-row' >
             <input type="text" className="form-control search form-control--narrow" placeholder="Search" value = {this.state.search} onChange = {
               (event) => {
@@ -50,9 +41,7 @@ class FilterJobs extends Component{
               }
             } />
           </div>
-
           <br/>
-
           <strong> Work type: </strong>
 
           <div className="checkbox">
