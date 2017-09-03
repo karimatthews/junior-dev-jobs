@@ -2,7 +2,7 @@
   "root": "build/",
   "clean_urls": false,
   "routes": {
-    "/**": "index.html",
-    "/logo.jpg": "logo.jpg"
+    "/logo.jpg": "logo.jpg",
+    "/**": "index.html"
   }
 }
