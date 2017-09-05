@@ -8,6 +8,11 @@ Junior Dev Jobs gathers all these opportunities into one place and and updates u
 
 # Usage
 
+Run the frontend in your dev environment:
+- `npm install`
+- `npm start`
+- Visit localhost:3000
+
 Junior Dev Jobs is deployed at https://melbourne-junior-dev-jobs.herokuapp.com/.
 
 # Technology
