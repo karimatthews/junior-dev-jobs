@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 const Home = () => (
 
   <div className="wrapper">
-    
 
-    <div id = 'landing-background'>
+
+    <div className = 'landing-background'>
 
     <div className = 'centered'>
       <h1 className = 'landing-title'> Melbourne Junior Dev Jobs </h1>

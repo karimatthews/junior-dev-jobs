@@ -23,13 +23,15 @@
   max-width: 100%;
   /*color: #F5F5F5;*/
   font-size: 5em;
+  max-width: 100%;
 }
 
-#landing-background {
+.landing-background {
   /*background-image: url('images/blurred.png');
   background-size: cover;*/
   height: 100vh;
   display: flex;
+  max-width: 100%;
 }
 
 /*MOBILE ONLY STYLES 768px- */
@@ -45,5 +47,9 @@
 
   .centered {
     margin-top: 40px;
+  }
+
+  .button-container {
+    max-width: 100%;
   }
 }
