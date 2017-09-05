@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom'
 const Home = () => (
 
   <div className="wrapper">
-    
-
-    <div id = 'landing-background'>
-
     <div className = 'centered'>
       <h1 className = 'landing-title'> Melbourne Junior Dev Jobs </h1>
 
@@ -35,7 +31,6 @@ const Home = () => (
             I want to hire a junior developer
             </Button>
           </Link>
-        </div>
       </div>
     </div>
   </div>

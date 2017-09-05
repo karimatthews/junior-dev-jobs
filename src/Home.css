@@ -25,12 +25,6 @@
   font-size: 5em;
 }
 
-#landing-background {
-  /*background-image: url('images/blurred.png');
-  background-size: cover;*/
-  height: 100vh;
-  display: flex;
-}
 
 /*MOBILE ONLY STYLES 768px- */
 @media screen and (max-width: 768px) {
